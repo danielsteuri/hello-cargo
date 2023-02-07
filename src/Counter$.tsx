@@ -1,8 +1,12 @@
 import { tag } from "parcel/mod.ts";
 import { state } from "parcel/state/mod.ts";
 
-export default () => {
-  const [count, setCount] = state(0);
+interface CounterProps extends JSX.ElementProps {
+  initialCount: number;
+}
+
+export default ({ initialCount }: CounterProps) => {
+  const [count, setCount] = state(initialCount);
 
   return (
     <div class="flex gap-4 items-center">
