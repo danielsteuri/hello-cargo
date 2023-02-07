@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "jsxFactory": "tag",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "dom.asynciterable",
+      "deno.ns"
+    ]
+  },
+  "importMap": "./import_map.json",
+  "tasks": {
+    "dev": "load pages && load islands && deno run --allow-all --watch=./pages,./assets,./src app.ts"
+  },
+}
